@@ -1,4 +1,4 @@
-﻿using Imtahan_Proqrami.BLL.Services.IServices;
+﻿using Imtahan_Proqrami.BLL.Abstract;
 using Imtahan_Proqrami.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;

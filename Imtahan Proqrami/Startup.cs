@@ -1,12 +1,12 @@
 using AutoMapper;
-using Imtahan_Proqrami.BLL.Services;
-using Imtahan_Proqrami.BLL.Services.IServices;
+using Imtahan_Proqrami.BLL.Abstract;
+using Imtahan_Proqrami.BLL.Concrete;
+using Imtahan_Proqrami.DAL.Abstract;
+using Imtahan_Proqrami.DAL.Concrete;
 using Imtahan_Proqrami.DAL.Core;
 using Imtahan_Proqrami.DAL.DatabaseContext;
-using Imtahan_Proqrami.DAL.Repositories;
-using Imtahan_Proqrami.DAL.Repositories.IRepositories;
-using Imtahan_Proqrami.UnitOfWorks;
-using Imtahan_Proqrami.UnitOfWorks.IUnitOfWorks;
+using Imtahan_Proqrami.DependencyInjection;
+using Imtahan_Proqrami.UnitOfWork.Abstract;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,21 +34,10 @@ namespace Imtahan_Proqrami
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<DataContext>(options =>
-            {
 
-                options.UseSqlServer(Configuration.GetConnectionString("Db"));
+            DependencyInjections dependencyContainer = new DependencyInjections(Configuration);
+            dependencyContainer.RegisterServices(services);
 
-
-            });
-            services.AddScoped<ILessonRepository,LessonRepository>();
-            services.AddScoped<ILessonService, LessonService>();
-            services.AddScoped<IPupilRepository, PupilRepository>();
-            services.AddScoped<IPupilService, PupilService>();
-            services.AddScoped<IExamRepository, ExamRepository>();
-            services.AddScoped<IExamService, ExamService>();
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddAutoMapper(typeof(Automapper));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

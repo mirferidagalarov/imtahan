@@ -3,8 +3,8 @@ using System;
 using Imtahan_Proqrami.DAL.DatabaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Imtahan_Proqrami.Migrations
 {
@@ -15,31 +15,31 @@ namespace Imtahan_Proqrami.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
+                .HasAnnotation("Relational:MaxIdentifierLength", 63)
                 .HasAnnotation("ProductVersion", "5.0.17")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
             modelBuilder.Entity("Imtahan_Proqrami.Entities.Exam", b =>
                 {
                     b.Property<int>("ExamId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<DateTime>("ExamDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
+                        .HasColumnType("boolean");
 
                     b.Property<int>("LessonId")
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.Property<int>("PupilId")
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.Property<int>("Score")
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.HasKey("ExamId");
 
@@ -54,26 +54,26 @@ namespace Imtahan_Proqrami.Migrations
                 {
                     b.Property<int>("LessonId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<int>("Class")
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
+                        .HasColumnType("boolean");
 
                     b.Property<int>("LessonCode")
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.Property<string>("LessonName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.Property<string>("LessonTeacherName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.Property<string>("LessonTeacherSurname")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.HasKey("LessonId");
 
@@ -84,23 +84,23 @@ namespace Imtahan_Proqrami.Migrations
                 {
                     b.Property<int>("PupilId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<int>("Class")
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
+                        .HasColumnType("boolean");
 
                     b.Property<string>("PupilName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.Property<int>("PupilNumber")
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.Property<string>("PupilSurname")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.HasKey("PupilId");
 
