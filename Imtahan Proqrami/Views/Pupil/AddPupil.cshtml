@@ -1,0 +1,44 @@
+﻿@model PupilToAddDTO
+
+<main>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Add Pupil</h3></div>
+                    <div class="card-body">
+                        <form method="post" asp-controller="Pupil" asp-action="Add">
+                            <div class="row mb-3">
+                                <div class="col-md-12">
+                                    <div class="form-floating mb-3 mb-md-3">
+                                        <input asp-for="PupilNumber" type="number" class="form-control" id="pupilnumber" placeholder="enter pupilnumber" />
+                                        <span asp-validation-for="PupilNumber" style="color:red"></span>
+                                        <label for="inputFirstName">Pupil Number</label>
+                                    </div>
+                                    <div class="form-floating mb-3 mb-md-3">
+                                        <input asp-for="PupilName" type="text" class="form-control" id="pupilname" placeholder="enter pupilname" />
+                                        <span asp-validation-for="PupilName" style="color:red"></span>
+                                        <label for="inputFirstName">Pupil Name</label>
+                                    </div>
+                                    <div class="form-floating mb-3 mb-md-3">
+                                        <input asp-for="PupilSurname" type="text" class="form-control" id="pupilsurname" placeholder="enter pupilsurname" />
+                                        <span asp-validation-for="PupilSurname" style="color:red"></span>
+                                        <label for="inputFirstName">Pupil Surname</label>
+                                    </div>
+                                    <div class="form-floating mb-3 mb-md-3">
+                                        <input asp-for="Class" type="number" class="form-control" id="class" placeholder="enter class" />
+                                        <span asp-validation-for="Class" style="color:red"></span>
+                                        <label for="inputFirstName">Class</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 mb-0">
+                                <button type="submit" class="btn btn-success">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

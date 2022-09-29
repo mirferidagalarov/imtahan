@@ -1,0 +1,49 @@
+﻿@model LessonToAddDTO
+
+<main>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Add Lesson</h3></div>
+                    <div class="card-body">
+                        <form method="post" asp-controller="Lesson" asp-action="Add">
+                            <div class="row mb-3">
+                                <div class="col-md-12">
+                                    <div class="form-floating mb-3 mb-md-3">
+                                        <input asp-for="LessonCode" type="number" class="form-control" id="lessoncode" placeholder="enter Lessoncode" />
+                                        <span asp-validation-for="LessonCode" style="color:red"></span>
+                                        <label for="inputFirstName">Lesson Code</label>
+                                    </div>
+                                    <div class="form-floating mb-3 mb-md-3">
+                                        <input asp-for="LessonName" type="text" class="form-control" id="lessonname" placeholder="enter departmentname" />
+                                        <span asp-validation-for="LessonName" style="color:red"></span>
+                                        <label for="inputFirstName">Lesson Name</label>
+                                    </div>
+                                    <div class="form-floating mb-3 mb-md-3">
+                                        <input asp-for="Class" type="number" class="form-control" id="class" placeholder="enter class" />
+                                        <span asp-validation-for="Class" style="color:red"></span>
+                                        <label for="inputFirstName">Class</label>
+                                    </div>
+                                    <div class="form-floating mb-3 mb-md-3">
+                                        <input asp-for="LessonTeacherName" type="text" class="form-control" id="lessonteachername" placeholder="enter LessonTeacherName" />
+                                        <span asp-validation-for="LessonTeacherName" style="color:red"></span>
+                                        <label for="inputFirstName">Teacher Name</label>
+                                    </div>
+                                    <div class="form-floating mb-3 mb-md-3">
+                                        <input asp-for="LessonTeacherSurname" type="text" class="form-control" id="lessonteachersurname" placeholder="enter LessonTeaherSurname" />
+                                        <span asp-validation-for="LessonTeacherSurname" style="color:red"></span>
+                                        <label for="inputFirstName">Teacher Surname</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 mb-0">
+                                <button type="submit" class="btn btn-success">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

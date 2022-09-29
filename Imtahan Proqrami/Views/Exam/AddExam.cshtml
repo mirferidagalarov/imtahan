@@ -1,0 +1,42 @@
+﻿@model ExamToAddDTO
+
+<main>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Add Exam</h3></div>
+                    <div class="card-body">
+                        <form method="post" asp-controller="Exam" asp-action="Add" enctype="multipart/form-data">
+                            <div class="row mb-3">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="department">Lesson Code</label>
+                                        <select class="form-control" asp-for="LessonId" asp-items="(new @SelectList(Model.Lessons,"LessonId","LessonCode"))"></select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="department">Pupil Number</label>
+                                        <select class="form-control" asp-for="PupilId" asp-items="(new @SelectList(Model.Pupils,"PupilId","PupilNumber"))"></select>
+                                    </div>
+                                    <div class="form-floating mb-3 mt-3 mb-md-3">
+                                        <input asp-for="ExamDate" type="datetime-local" value="DateTimeNow" class="form-control" id="examdate" placeholder="enter examdate" />
+                                        <span asp-validation-for="ExamDate" style="color:red"></span>
+                                        <label for="inputFirstName">Exam Date</label>
+                                    </div>
+                                    <div class="form-floating mb-3 mt-3 mb-md-3">
+                                        <input asp-for="Score" type="number" class="form-control" id="score" placeholder="enter score" />
+                                        <span asp-validation-for="Score" style="color:red"></span>
+                                        <label for="inputFirstName">Score</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 mb-0">
+                                <button type="submit" class="btn btn-success">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

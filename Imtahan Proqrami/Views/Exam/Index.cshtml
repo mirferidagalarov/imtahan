@@ -1,0 +1,71 @@
+﻿@model List<ExamToListDTO>
+
+<link href="~/css/but.css" rel="stylesheet" />
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">Exams</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item active">Exams</li>
+        </ol>
+
+        <div class="grid-button">
+            <a asp-controller="Exam" asp-action="AddExam" class="btn btn-primary">Add Exam</a>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table me-1"></i>
+                Exams
+            </div>
+            <div class="card-body">
+                <table id="datatablesSimple">
+                    <thead>
+                        <tr>
+                            <th>Lesson Code</th>
+                            <th>Lesson Name</th>
+                            <th>Pupil Number</th>
+                            <th>Pupil Name</th>
+                            <th>Pupil Surname</th>
+                            <th>Exam Date</th>
+                            <th>Score</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Lesson Code</th>
+                            <th>Lesson Name</th>
+                            <th>Pupil Number</th>
+                            <th>Pupil Name</th>
+                            <th>Pupil Surname</th>
+                            <th>Exam Date</th>
+                            <th>Score</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+
+                        @foreach (var exam in Model)
+                        {
+                            <tr>
+                                <td>@exam.Lesson.LessonCode</td>
+                                <td>@exam.Lesson.LessonName</td>
+                                <td>@exam.Pupil.PupilNumber</td>
+                                <td>@exam.Pupil.PupilName</td>
+                                <td>@exam.Pupil.PupilSurname</td>
+                                <td>@exam.ExamDate</td>
+                                <td>@exam.Score</td>
+                                <td>@Html.ActionLink("Edit", "UpdateExam", "Exam", new { id = exam.ExamId }, new { @class = "btn btn-primary" })</td>
+                                <td>@Html.ActionLink("Delete", "Delete", "Exam", new { id = exam.ExamId }, new { @class = "btn btn-danger" })</td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</main>

@@ -1,0 +1,62 @@
+﻿@model List<PupilToListDTO>
+
+<link href="~/css/but.css" rel="stylesheet" />
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">Pupil</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item active">Pupils</li>
+        </ol>
+
+        <div class="grid-button">
+            <a asp-controller="Pupil" asp-action="AddPupil" class="btn btn-primary">Add Pupil</a>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table me-1"></i>
+                Pupils
+            </div>
+
+            <div class="card-body">
+                <table id="datatablesSimple">
+                    <thead>
+                        <tr>
+                            <th>Pupil Number</th>
+                            <th>Pupil Name</th>
+                            <th>Pupil Surname</th>
+                            <th>Class</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Pupil Number</th>
+                            <th>Pupil Name</th>
+                            <th>Pupil Surname</th>
+                            <th>Class</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var pupil in Model)
+                        {
+                            <tr>
+                                <td>@pupil.PupilNumber</td>
+                                <td>@pupil.PupilName</td>
+                                <td>@pupil.PupilSurname</td>
+                                <td>@pupil.Class</td>
+                                <td>@Html.ActionLink("Edit", "UpdatePupil", "Pupil", new { id = pupil.PupilId }, new { @class = "btn btn-success" })</td>
+                                <td>@Html.ActionLink("Delete", "Delete", "Pupil", new { id = pupil.PupilId }, new { @class = "btn btn-danger" })</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</main>
