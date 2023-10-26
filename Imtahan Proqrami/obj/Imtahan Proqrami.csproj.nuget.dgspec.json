@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\source\\repos\\Imtahan\\imtahan\\Imtahan Proqrami\\Imtahan Proqrami.csproj": {}
+    "C:\\Users\\Lenovo\\source\\repos\\Imtahanlar\\Imtahan\\imtahan\\Imtahan Proqrami\\Imtahan Proqrami.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\source\\repos\\Imtahan\\imtahan\\Imtahan Proqrami\\Imtahan Proqrami.csproj": {
+    "C:\\Users\\Lenovo\\source\\repos\\Imtahanlar\\Imtahan\\imtahan\\Imtahan Proqrami\\Imtahan Proqrami.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\source\\repos\\Imtahan\\imtahan\\Imtahan Proqrami\\Imtahan Proqrami.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\source\\repos\\Imtahanlar\\Imtahan\\imtahan\\Imtahan Proqrami\\Imtahan Proqrami.csproj",
         "projectName": "Imtahan Proqrami",
-        "projectPath": "C:\\Users\\Lenovo\\source\\repos\\Imtahan\\imtahan\\Imtahan Proqrami\\Imtahan Proqrami.csproj",
+        "projectPath": "C:\\Users\\Lenovo\\source\\repos\\Imtahanlar\\Imtahan\\imtahan\\Imtahan Proqrami\\Imtahan Proqrami.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\source\\repos\\Imtahan\\imtahan\\Imtahan Proqrami\\obj\\",
+        "outputPath": "C:\\Users\\Lenovo\\source\\repos\\Imtahanlar\\Imtahan\\imtahan\\Imtahan Proqrami\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

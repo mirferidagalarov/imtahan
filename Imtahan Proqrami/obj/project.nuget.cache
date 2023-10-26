@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dyZNpl+oKP/SdmvR87uU1fLUvHWWQh0N5ZXgAGMrgypl0xlMvdHdNodpotxxp0Ruj6DZkpExiseSkfFqnotLKw==",
+  "dgSpecHash": "liVkRuPLsFjvp+At+u9RHlJFw3XjfcYUR4mpGa477Rqt3gsxrmc28xsFi8/pCeLPdO9iSc3pQCQ7hn8iPp2zZA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\source\\repos\\Imtahan\\imtahan\\Imtahan Proqrami\\Imtahan Proqrami.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\source\\repos\\Imtahanlar\\Imtahan\\imtahan\\Imtahan Proqrami\\Imtahan Proqrami.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\automapper\\7.0.1\\automapper.7.0.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\5.0.1\\automapper.extensions.microsoft.dependencyinjection.5.0.1.nupkg.sha512",

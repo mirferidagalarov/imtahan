@@ -9,12 +9,12 @@
         },
         "compile": {
           "lib/netcoreapp2.0/AutoMapper.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/netcoreapp2.0/AutoMapper.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -86,12 +86,12 @@
         },
         "compile": {
           "ref/netcoreapp3.1/Microsoft.Data.SqlClient.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtimeTargets": {
@@ -592,12 +592,12 @@
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -5943,11 +5943,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\source\\repos\\Imtahan\\imtahan\\Imtahan Proqrami\\Imtahan Proqrami.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\source\\repos\\Imtahanlar\\Imtahan\\imtahan\\Imtahan Proqrami\\Imtahan Proqrami.csproj",
       "projectName": "Imtahan Proqrami",
-      "projectPath": "C:\\Users\\Lenovo\\source\\repos\\Imtahan\\imtahan\\Imtahan Proqrami\\Imtahan Proqrami.csproj",
+      "projectPath": "C:\\Users\\Lenovo\\source\\repos\\Imtahanlar\\Imtahan\\imtahan\\Imtahan Proqrami\\Imtahan Proqrami.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\source\\repos\\Imtahan\\imtahan\\Imtahan Proqrami\\obj\\",
+      "outputPath": "C:\\Users\\Lenovo\\source\\repos\\Imtahanlar\\Imtahan\\imtahan\\Imtahan Proqrami\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
